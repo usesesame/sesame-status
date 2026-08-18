@@ -1,31 +1,40 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: usesesame
+repo: sesame-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Website
+    url: https://usesesame.app
+  - name: API
+    url: https://api.usesesame.app/v1/product/status
+  - name: Account portal
+    url: https://account.usesesame.app
+  - name: Mail relay
+    url: mail.usesesame.app
+    port: 587
+    check: tcp-ping
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.usesesame.app
+  name: Sesame Status
+  introTitle: Sesame status
+  introMessage: >-
+    Availability of the Sesame website, API, account portal, and mail relay.
+    These checks run on GitHub Actions rather than on the server they watch, so
+    this page stays up when that server does not.
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Sesame
+      href: https://usesesame.app
+    - title: Source
+      href: https://github.com/usesesame
+  themeMode: dark
+  logoUrl: https://usesesame.app/favicon.svg
+  favicon: https://usesesame.app/favicon.svg
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# The administration console is deliberately absent. It is noindex, unlinked,
+# and a public status page confirming it exists and is reachable helps nobody
+# except someone looking for it.
+
+assignees:
+  - d0mkaaa
